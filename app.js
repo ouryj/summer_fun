@@ -12,9 +12,7 @@ let express          = require('express'),
 
 
     // connect mongoose
-    //mongolab(mongodb+srv://modatamongo:<connect1>@cluster0-ga4vl.mongodb.net/test?retryWrites=true&w=majority)
     mongoose.connect(process.env.DATABASEPATH,{useNewUrlParser:true});
-    // mongoose.connect("mongodb://localhost:27017/summer_camp",{useNewUrlParser:true});
     app.use(express.static('public'));
     app.use(methodOverride('_method'));
     app.use(bodyParser.urlencoded({extended:true}));
