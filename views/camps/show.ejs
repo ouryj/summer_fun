@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+<div class="container">
+<div class="form">
+    <p><strong><%=showCamp.name %></strong></p>
+    <img src="<%= showCamp.image %>" alt="">
+    <p><%= showCamp.funtype %></p>
+    <p>submitted by <em><%=showCamp.author.username%> </em></p>
+    <% if(currentUser && showCamp.author.id.equals(currentUser._id)){ %>
+    <a href="/camp/<%=showCamp._id%>/edit" class="btn-warning" >Edit</a>
+    <form class="btn-danger" action="/camp/<%=showCamp._id%>?_method=delete" method="post">
+        <button  type="submit">Delete</button>
+    </form>
+    <%}%>
+    <div class="comment">
+
+    <a href="/camp/<%=showCamp._id%>/comments/new">Add a comment</a>
+    <h5>Comments </h5>
+     <% showCamp.comments.forEach((comment)=>{ %>
+            
+         <p> <strong><%=comment.author.username%></strong> <br><%=comment.body %></p>
+    <div class="btn">
+         <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+            
+         <a href="/camp/<%=showCamp._id%>/comments/<%=comment._id%>/edit" class="btn-warning">edit comment</a>
+         <form class="btn-danger" action="/camp/<%=showCamp._id%>/comments/<%=comment._id%>?_method=delete" method="post">
+            <button  type="submit">Delete comment</button>
+            <%}%>
+        </form>
+
+    <% }) %>
+    </div>
+
+</div>
+
+</div>
+</div>
+
+<% include ../partials/footer %>

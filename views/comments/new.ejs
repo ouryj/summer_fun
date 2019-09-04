@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+<div class="container">
+<div class="form">
+    <h1>leave a comment on <%=camp.place%></h1>
+    <form action="/camp/<%=camp._id%>/comments" method="post">
+        <div class="input">
+         <input type="text" name="comment[body]" placeholder="leave your comment here" id="">
+       </div>
+        <button class="btn-success" type="submit">Comment</button>
+    </form>
+</div>
+</div>
+
+<% include ../partials/footer %>

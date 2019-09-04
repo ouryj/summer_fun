@@ -1,0 +1,531 @@
+body {
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    background: gainsboro;
+    height: 50px;
+    padding-top: 1.66%;
+    width: 100%;
+    margin: 0;
+    
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
+}
+
+.login {
+    float: right;
+    font-size: 1em;
+    margin: 0 1.66% 0 0;
+   
+}
+header {
+    background:  gainsboro;
+    height: 12em;
+}
+h1{
+    padding-top: 20px;
+}
+hr {
+    display: none;
+}
+img{
+    width: 100%; height: 450px;
+    
+}
+a {
+     padding: 2px;
+
+}
+input{
+    width: 80%;
+    height: 50%; font-size: 1.66em; font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+footer{
+    color: white;
+    font-size: .5em;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background: gainsboro;
+   
+    
+    
+}
+.link {
+    margin: 1%;
+    padding: 10px;
+    font-size: 1.2em;
+    color: rgb(0, 30, 0);
+ 
+ }
+.form {
+    background: white;
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid rgba(0, 0,0, 0.2);
+    padding: 0 0 10px 0;
+    
+    
+}
+.input{
+    width: 90%;
+   
+    margin: 20px;
+    
+}
+.alert-error{
+    background: rgb(200,60, 0);
+    width: 100%;
+    color:black;
+    text-align: center;
+    margin-top: 1.55%;
+    height: 40px;
+    padding-top: 20px;
+}
+.alert-success{
+    background: rgb(0, 230,0);
+    width: 100%;
+    text-align: center;
+    color: green;
+    margin-top: 1.55%;
+    height: 40px;
+    padding-top: 20px;
+}
+.btn-success {
+    width: 15%;
+    background: green;
+    border-radius: 10px;
+    
+}
+.btn-danger{
+    display: inline;
+   
+}
+.btn-warning {
+    background: rgb(255, 250,2);
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: whitesmoke;
+}
+button {
+    background: red;
+   
+    font-size: 1.2em;
+    border-radius: 5px;
+    color: whitesmoke;
+
+}
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: coverAnimation 40s linear infinite;
+}
+.slideshow li:nth-child(1) {
+    background-image: url('../images/summer1.jpeg');
+}
+.slideshow li:nth-child(2){
+    background-image: url('../images/summer2.jpeg');
+    animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+    background-image: url('../images/summer3.jpeg');
+    animation-delay: 20s;
+}
+.slideshow li:nth-child(4){
+    background-image: url('../images/summer4.jpeg');
+    background-size: cover;
+    animation-delay: 30s;
+}
+.info{
+    background: blue;
+    color: whitesmoke;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin: 0 0 20px 0;
+}
+#info {
+    background: blue;
+    color: whitesmoke;
+    border-radius: 5px;
+    
+    padding: 10px 10px 15px 10px;
+    font-size: 1.5em;
+}
+#welcome-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+#welcome-header h1 {
+    color: #ffffff;
+
+}
+#welcome-header h1::first-letter {
+    font-size: 2em;
+}
+#link {
+    color: #ffffff;
+    font-size: 1.2em;
+    background: rgb(57, 99, 2);
+    border-radius: 5px;
+    padding: 5px;   
+}
+#link:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+@keyframes coverAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+}
+/* for responsiveness */
+@media(max-width:768px){
+
+nav {
+    background: gainsboro;
+    height: 50px;
+    padding-top: 20px;
+    width: 100%;
+    margin: 0;
+    
+}
+/* nav a,.link {
+    padding-top: 10px;
+} */
+a {
+    text-decoration: none;
+}
+
+/* .link {
+   margin: 1%;
+   padding-top: 10px;
+   font-size: 1.2em;
+   color: rgb(0, 30, 0);
+
+} */
+.login {
+    float: right;
+    font-size: 1em;
+    margin: 0 1.66% 0 0;
+   
+}
+header {
+    background:  gainsboro;
+    height: 12em;
+}
+h1{
+    padding-top: 20px;
+}
+hr {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: gainsboro;
+   
+    
+    
+}
+.form {
+    background: white;
+    width: 90%;
+
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid rgba(0, 0,0, 0.2);
+    padding: 0 0 10px 0;
+    
+    
+}
+.input{
+    width: 90%;
+   
+    margin: 20px;
+    
+}
+input{
+    width: 80%;
+    height: 50%; font-size: 1.66em; font-weight: 400;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+}
+/* responsive for iphone 6/7/8 */
+@media(max-width:375px){
+    body{
+        width: 414px;
+        height: 736px;
+        overflow: hidden;
+    }
+
+nav {
+    background: gainsboro;
+    margin: 0 auto;
+    height: 40px;
+    padding-top: 15px;
+    width: 90%;
+    font-size: .785em;
+
+    
+}
+a {
+    text-decoration: none;
+}
+
+.link {
+   margin: 1%;
+   padding: 10px;
+   font-size: 1.2em;
+   color: rgb(0, 30, 0);
+
+}
+.login {
+    float: right;
+    font-size: 1em;
+    margin: 0 1.66% 0 0;
+   
+}
+header {
+    background:  gainsboro;
+    height: 6em;
+}
+header h1{
+    font-size: 1.1em;
+    padding: 0
+}
+header p{
+    font-size: .8em;
+}
+
+h1{
+    padding-top: 20px;
+}
+hr {
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background: gainsboro;
+   
+    
+    
+}
+.form {
+    background: white;
+    width: 95%;
+    margin: 12px auto;
+    text-align: center;
+    border: 1px solid rgba(0, 0,0, 0.2);
+    padding: 0 0 10px 0;
+    
+    
+}
+.info{
+    background: green;
+   margin-bottom: 10px;
+}
+.input{
+    width: 90%;
+   
+    margin: 20px;
+    
+}
+.form h1{
+    font-size: 1.2em;
+}
+.btn-success{
+    font-size: 1em;
+    border-radius: 10px;
+    width: 11em; 
+}
+.link:hover{
+    cursor: pointer;
+}
+#info {
+    background: blue;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 5px 5px 8px 5px;
+    font-size: .9em;
+}
+input{
+    width: 80%;
+    height: 50%; font-size: 1.0em; font-weight: 400;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+}
+
+/* for iphone 6/7/8plus */
+@media(max-width:414px){
+    body{
+        width: 414px;
+        height: 736px;
+    }
+    nav {
+        background: gainsboro;
+        margin: 0 auto;
+        height: 40px;
+        padding-top: 15px;
+        width: 90%;
+        font-size: .785em;
+    
+        
+    }
+    a {
+        text-decoration: none;
+    }
+    
+    .link {
+       margin: 1%;
+       padding: 10px;
+       font-size: 1.2em;
+       color: rgb(0, 30, 0);
+    
+    }
+    .login {
+        float: right;
+        font-size: 1em;
+        margin: 0 1.66% 0 0;
+       
+    }
+    header {
+        background:  gainsboro;
+        height: 6em;
+    }
+    header h1{
+        font-size: 1.1em;
+        padding: 0
+    }
+    header p{
+        font-size: .8em;
+    }
+    
+    h1{
+        padding-top: 20px;
+    }
+    hr {
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        background: gainsboro;
+       
+        
+        
+    }
+    .form {
+        background: white;
+        width: 95%;
+        margin: 12px auto;
+        text-align: center;
+        border: 1px solid rgba(0, 0,0, 0.2);
+        padding: 0 0 10px 0;
+        
+        
+    }
+    .info{
+        background: green;
+       margin-bottom: 10px;
+    }
+    .input{
+        width: 90%;
+       
+        margin: 20px;
+        
+    }
+    .form h1{
+        font-size: 1.2em;
+    }
+    .btn-success{
+        font-size: 1em;
+        border-radius: 10px;
+        width: 11em; 
+    }
+    .link:hover{
+        cursor: pointer;
+    }
+    #info {
+        background: blue;
+        color: whitesmoke;
+        border-radius: 5px;
+        padding: 5px 5px 8px 5px;
+        font-size: .9em;
+    }
+    input{
+        width: 80%;
+        height: 50%; font-size: 1.0em; font-weight: 400;
+        text-align: center;
+        border-radius: 10px;
+        
+    }
+
+}
+

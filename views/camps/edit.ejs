@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+<div class="container">
+
+    <div>
+        <h1>Edit <%= edit.place %></h1>
+        <form action="/camp/<%=edit._id%>?_method=put" method="post">
+            <div class="input">
+               <input type="text" name="camp[place]" value="<%=edit.place %>" id=""> 
+            </div>
+            <div class="input">
+               <input type="text" name="camp[image]" value="<%= edit.image %>" id="">
+            </div>
+            <div class="input">
+               <input type="text" name="camp[funtype]" value="<%=edit.funtype%>" id="">
+            </div>
+            <button class="btn-success" type="submit">Update</button>
+        </form>
+   </div>
+
+</div>

@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+<header class="container">
+    <h1>Welcome to summer adventure</h1>
+    <p>please share with us your most loved places</p>
+    <hr>
+    <a id="info" href="/camp/new">share your adventure</a>
+</header>
+
+<div class="container">
+
+<div class="form">
+  
+    <% camps.forEach((camp)=>{ %>
+        
+        <img src="<%=camp.image %>" alt="">
+        <h4> <%= camp.place %></h4>
+        <p><%= camp.funtype %></p>
+       
+        <a href="/camp/<%=camp._id%>" class="info">More info</a>
+        
+
+  <%  }) %>
+</div>
+</div>
+
+
+<% include ../partials/footer %>
